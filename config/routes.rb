@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  root 'foods#index'
   
   get 'foods/foodchallenge' => 'foods#foodchallenge'
   get 'foods/ladder' => 'foods#ladder'
   get 'foods/random' => 'foods#random'
+  
+  get '/foods/stuation'=>'foods#stuation'
+  get '/foods/alone'=>'foods#alone'
+  get '/foods/alone2'=>'foods#alone2'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

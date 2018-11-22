@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            .cover:hover{
+                opacity:0.5;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button">오늘 뭐먹지?</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">오늘의 추천메뉴</a>
+          <a class="w3-bar-item w3-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">조건</a>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/foods/stuation">상황별</a>
+            <a class="dropdown-item" href="#">날씨별</a>
+          </div>
+          <a href="#contact" class="w3-bar-item w3-button">게임</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+    
+      <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="margin-top:25px">상황별 메뉴추천</h3>
+      </div>
+    
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">데이트</div>
+            <img src="<%=asset_path('date.jpg')%>" alt="House" width="100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">혼밥</div>
+            <div class="cover"><a href="/foods/alone"><img src="<%=asset_path('alone.jpg')%>" alt="House" width="100%"></a></div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">다이어트</div>
+            <img src="<%=asset_path('diet.jpg')%>" alt="House" width="100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">술</div>
+            <img src="<%=asset_path('drink.jpg')%>" alt="House" width="100%">
+          </div>
+        </div>
+      </div>
+    
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">친구</div>
+            <img src="<%=asset_path('friend.jpg')%>" alt="House" width="100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">모임</div>
+            <img src="<%=asset_path('meeting')%>" alt="House" width="100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">특별한 날</div>
+            <img src="<%=asset_path('special.jpg')%>" alt="House" width="100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+            <img src="/w3images/house3.jpg" alt="House" style="width:99%">
+          </div>
+        </div>
+      </div>
+    
+    <!-- End page content -->
+    </div>
+    
+  
+</html>

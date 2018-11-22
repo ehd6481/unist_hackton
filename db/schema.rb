@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(version: 20181121110041) do
 
   create_table "foods", force: :cascade do |t|
+    t.string   "stuation"
+    t.string   "weather"
     t.string   "name"
-    t.string   "title"
-    t.string   "gg"
+    t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

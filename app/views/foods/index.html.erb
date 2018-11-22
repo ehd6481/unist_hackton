@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+        <style>
+            body, html { 
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            .content {
+                border: 0;
+                padding-top:50px;
+                padding-bottom:0px;
+                padding-right:0px;
+                padding-left:0px;
+                background: url(<%=asset_path('home.jpg')%>);
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+            html { 
+              background: url(<%=asset_path('home.jpg')%>); 
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }
+            .content>.wrapper{
+                width:35%;
+                margin:190px auto;
+            }
+            .content>.wrapper>#text{
+                font-family: 'Jua', sans-serif;
+                font-size:70px;
+                text-align:center;
+            }
+            .content>.wrapper>.btn-outline-success{
+                margin:0 auto;
+                display:block;
+                width:30%;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button">오늘 뭐먹지?</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">오늘의 추천메뉴</a>
+          <a class="w3-bar-item w3-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">조건</a>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/foods/stuation">상황별</a>
+            <a class="dropdown-item" href="#">날씨별</a>
+          </div>
+          <a href="#contact" class="w3-bar-item w3-button">게임</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="wrapper">
+            <div id="text">오늘 뭐먹지?</div>
+            <button type="button" class="btn btn-outline-success">시작하기</button>
+        </div>
+    </div>
+    
+    </body>
+</html>
