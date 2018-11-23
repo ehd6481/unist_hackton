@@ -1,42 +1,71 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="EUC-KR">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>Document</title>
-  <style>
-	#main{
-		background:yellow;
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    .w3-center{
+      width:70%;
+      margin:0 auto;
+    }
+    .w3-quarter{
+      margin-right:4.6em;
+    }
+    .cover:hover{
+                opacity:0.5;
+            }
+    .bagro{
+    	height:450px;
+    	width:80%;
+    	margin:150px;
+    	background-image: URL('/home.jpg') ;
+    }
+    #main{
+    	margin-top:150px;
+    	margin-left:20px;
 		position:absolute;
-		width:320pt;
-		top:10pt;
-		left:300pt;
+		width:500pt;
+		top:20pt;
+		font-size:20px;
 	}
 	#inputName{
-		background:#66ff66;
 		position:absolute;
 		width:320pt;
-		top:150pt;
-		left:300pt;
 		visibility:hidden;
+		margin-top:200px;
+		margin-left:30px;
 	}
 	#result{
-		background:#9966ff;
+		background:white;
 		position:absolute;
-		width:320pt;
-		top:150pt;
+		margin-left:250px;
+		width:550px;
+		height:420px;
+		margin-top:10px;
 		left:300pt;
 		visibility:hidden;
 	}
-	
-  </style>
-  <script>
+	#shResult{
+		font-size:20px;
+		height:400px;
+		margin-left:20px;
+		width:200px;
+		text-align:center;
+	}
+    </style>
+    <script>
 	var idNum = 0;
 	var arra=[];
-	var view = ["","ㅡ"];
+	var view = ["&emsp;&emsp;&emsp;&emsp;","ㅡㅡㅡ"];
 	var num=0;
 	window.onload=function(){
 		var ok=document.getElementById("ok");
@@ -49,21 +78,21 @@
 			inputName.style.visibility="visible";
 			num=document.getElementById("num").value;
 			var show="<table border id='input'>";
-			show+="<tr><th>no</th><th>이름</th><th>항목</th></tr>"
+			show+="<tr><th>no</th><th>선택자</th><th>음식항목</th></tr>"
 			for(var i=0; i<num; i++){
-				show+="<tr><td>"+(i+1)+"</td><td><input type='text' name='name'></td><td><input type='text' name='item'></td></tr>";
+				show+="<tr><td>"+(i+1)+"</td><td><input type='text' name='name'></td><td><input type='text' name='item'></td></tr> ";
 			}
 			show+="</table>";
 			document.getElementById("show").innerHTML=show;			
 		}
  
 		start.onclick=function(){
-			inputName.style.visibility="hidden";
+			inputName.style.visibility="visible";
 			result.style.visibility="visible";
 			var name=document.getElementsByName("name");
 			var item=document.getElementsByName("item");
-			var show1="<h3>결과</h3><br>"
-			show1+="<table width='50' height='500' id='output' >";
+			var show1="<br>"
+			show1+="<table width='50' height='100' id='output' >";
 			show1+="<tr>";
 			for(var i=0; i<num; i++){
 				show1+="<td><input id = "+idNum+" type='button' name='b_name' value="+name[i].value+"></td>";
@@ -74,7 +103,7 @@
 				}
 			}
 			show1+="</tr>";
-			for(var i=0; i<10; i++){
+			for(var i=0; i<8; i++){
 				show1+="<tr>";
 				for(var j=0; j<num; j++){
 					//show1+="<td >"+parseInt(Math.random()*2)+"</td>";
@@ -114,48 +143,69 @@
 		var inter = null;
 		var finish=tr[i].childNodes[j].innerHTML;
 	
-		tr[i].childNodes[j].innerHTML='지남';
+		tr[i].childNodes[j].innerHTML=7;
 		inter=setInterval(function(){
 		
 			
 					
-					if(tr[i].childNodes[j-1]&&tr[i].childNodes[j-1].innerHTML=="ㅡ"){
+					if(tr[i].childNodes[j-1]&&tr[i].childNodes[j-1].innerHTML=="ㅡㅡㅡ"){
 						j=j-2;
 					}
-					else if(tr[i].childNodes[j+1]&&tr[i].childNodes[j+1].innerHTML=="ㅡ"){
+					else if(tr[i].childNodes[j+1]&&tr[i].childNodes[j+1].innerHTML=="ㅡㅡㅡ"){
 						j=j+2;
 				
 					}
 				
 						
 				finish=tr[++i].childNodes[j].innerHTML;
-				tr[i].childNodes[j].innerHTML='지남';
+				tr[i].childNodes[j].innerHTML= 7;
 			
-			if(finish!="|" && finish!="ㅡ"){
+			if(finish!="|" && finish!="ㅡㅡㅡ"){
 				alert(finish);
 				clearInterval(inter);
 			}
 		},100);
 	}
+
   </script>
- </head>
- <body>
-	<div id="main">	
-		<center>
-		<h3>사다리 게임</h3>
-		참가할 인원: <input type="text" id="num"/><br>
-		<input type="button" id="ok" value="확인"/>
+
+    
+    <body >
+         <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+          <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="/" class="w3-bar-item w3-button">오늘 뭐먹지?</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+              <a href="#projects" class="w3-bar-item w3-button">오늘의 추천메뉴</a>
+              <a class="w3-bar-item w3-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">조건</a>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/foods/stuation">상황별</a>
+                <a class="dropdown-item" href="#">날씨별</a>
+              </div>
+              <a href="/foods/game" class="w3-bar-item w3-button">게임</a>
+            </div>
+          </div>
+        </div>
+   
+        <!-- About Section -->
+        <div class= "bagro">
+        	<div id="main">	
+        	
+		<h3>사다리 게임(6개이하)</h3>
+		선택할 음식개수: <input type="text" id="num"/><br>
+		<input type="button"  class="btn btn-success" id="ok" value="눌러주세요!"/>
 	</div>	
 	<div id="inputName">	
 		<p id="show"></p>
-		<input type="button" id="start" value="사다리타기"/>
+		<input type="button" class="btn btn-success" id="start" value="사다리타기"/>
 	</div>
 	<div id="result">	
 		<p id="shResult"></p>
+		
+	<form><input type="button" value="페이지 새로 고침" class="btn btn-success" onClick="window.location.reload()"></form>
 	</div>
-
-
-	
- </body>
+        </div>
+        
+    </body>
 </html>
-
