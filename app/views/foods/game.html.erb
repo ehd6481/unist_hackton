@@ -15,6 +15,12 @@
       width:70%;
       margin:0 auto;
     }
+    .w3-quarter{
+      margin-right:4.6em;
+    }
+    .cover:hover{
+                opacity:0.5;
+            }
     </style>
     <body>
          <!-- Navbar (sit on top) -->
@@ -36,20 +42,20 @@
     
         <!-- About Section -->
         <div class="w3-container" style="padding:128px 16px" id="about">
-          <h3 class="w3-center">ABOUT THE COMPANY</h3>
-          <p class="w3-center w3-large">Key features of our company</p>
+          <h3 class="w3-center">게임으로 메뉴추천</h3>
+          <p class="w3-center w3-large">즐겁게 맛잇게 먹을 음식을 골라바!</p>
           <div class="w3-row-padding w3-center" style="margin-top:64px">
             <div class="w3-quarter">
-              <img src="<%=asset_path('random.png')%>" width="100%">
+              <div class="cover"><a href="/foods/random"><img src="<%=asset_path('random.png')%>" width="100%"></a></div>
               <p class="w3-large">랜덤</p>
             </div>
             <div class="w3-quarter">
               <!--<i class="fa fa-challenge w3-margin-bottom w3-jumbo"></i>-->
-              <img src="<%=asset_path('ladder.png')%>" width="100%">
+              <div class="cover"><a href="/foods/ladder"><img src="<%=asset_path('ladder.png')%>" width="100%"></a></div>
               <p class="w3-large">사다리게임</p>
             </div>
             <div class="w3-quarter">
-              <img src="<%=asset_path('challenge.png')%>" width="100%">
+              <div class="cover"><a href="/foods/foodchallenge"><img src="<%=asset_path('challenge.png')%>" width="100%"></a></div>
               <p class="w3-large">음식 월드컵</p>
             </div>
           </div>
