@@ -5,7 +5,7 @@
             width: 28em;
             height: 40em;
             float: left;
-            background-image: url(https://todayeat-donggeol.c9users.io/assets/3.jpg);
+            background-image: url(<%=asset_path('1.jpg')%>);
             margin-left:1%;
             margin-top:5%;
             background-size:100% 100%;
@@ -55,13 +55,13 @@
         var temp;
         var rnum;
  
-        for(var i=1; i<=32; i++){
+        for(var i=1; i<=90; i++){
             ar.push(i);
         }
  
         for(var i=0; i< ar.length ; i++)
         {
-            rnum = Math.floor(Math.random() *32);
+            rnum = Math.floor(Math.random() *90);
             temp = ar[i];
             ar[i] = ar[rnum];
             ar[rnum] = temp;
@@ -69,7 +69,7 @@
  var a32=new Array();
  for(var i=0;i<32;i++){
 a32.push(i);
-     a32[i]='https://todayeat-donggeol.c9users.io/assets/'+ar[i]+'.jpg';
+     a32[i]='https://retry-donggeol.c9users.io/assets/'+ar[i+1]+'.jpg';
      
  }
 
