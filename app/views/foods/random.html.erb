@@ -4,6 +4,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
+        .nemo{
+            margin-left:70px;
+            margin-top:80px;
+            width:90%;
+            height:520px;
+            background-color:#f1f1f1;
+            position:relative;
+            text-align:center;
+        }
             div#poto2{
             padding: 0px;
             width: 28em;
@@ -14,6 +23,11 @@
             margin-top:5%;
             background-size:100% 100%;
             margin-bottom:10%;
+            width:400px;
+            height:400px;
+            margin-left:420px;
+            margin-top:20px;
+            position:absolute;
             }
             div#poto2:hover{
             opacity:0.4;
@@ -37,17 +51,18 @@
         </div>
       </div>
     </div>
+       <div class="nemo">
+           <h1 style="color:black; font-size:40px;">오늘의 음식은!!</h1>
          <div class="row">
 					<br></br>
-			
 			<div id="poto2" onclick="clickDiv(1);"></div>
-	
-				
         </div>
+       </div>
         <script>
             var num = Math.floor(Math.random() *90);
             num='https://retry-donggeol.c9users.io/assets/'+num+'.jpg';
             document.getElementById("poto2").style = 'background-image:url('+num+');';
         </script>
+       
     </body>
 </html>
