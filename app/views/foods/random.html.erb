@@ -1,6 +1,18 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
+        .nemo{
+            margin-left:70px;
+            margin-top:80px;
+            width:90%;
+            height:520px;
+            background-color:#f1f1f1;
+            position:relative;
+            text-align:center;
+        }
             div#poto2{
             padding: 0px;
             width: 28em;
@@ -11,6 +23,11 @@
             margin-top:5%;
             background-size:100% 100%;
             margin-bottom:10%;
+            width:400px;
+            height:400px;
+            margin-left:420px;
+            margin-top:20px;
+            position:absolute;
             }
             div#poto2:hover{
             opacity:0.4;
@@ -18,17 +35,34 @@
         </style>
     </head>
     <body>
+        <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button">오늘 뭐먹지?</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">오늘의 추천메뉴</a>
+          <a class="w3-bar-item w3-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">조건</a>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/foods/stuation">상황별</a>
+            <a class="dropdown-item" href="#">날씨별</a>
+          </div>
+          <a href="/foods/game" class="w3-bar-item w3-button">게임</a>
+        </div>
+      </div>
+    </div>
+       <div class="nemo">
+           <h1 style="color:black; font-size:40px;">오늘의 음식은!!</h1>
          <div class="row">
 					<br></br>
-			
 			<div id="poto2" onclick="clickDiv(1);"></div>
-	
-				
         </div>
+       </div>
         <script>
             var num = Math.floor(Math.random() *90);
             num='https://retry-donggeol.c9users.io/assets/'+num+'.jpg';
             document.getElementById("poto2").style = 'background-image:url('+num+');';
         </script>
+       
     </body>
 </html>
