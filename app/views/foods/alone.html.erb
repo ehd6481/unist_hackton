@@ -6,8 +6,13 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
         <style>
         body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        p{font-family: 'Sunflower', sans-serif;} 
+        .w3-container{
+            padding-top:1em;
+        }
         </style>
     </head>
     <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -23,12 +28,16 @@
             <a class="dropdown-item" href="/foods/stuation">상황별</a>
             <a class="dropdown-item" href="#">날씨별</a>
           </div>
-          <a href="#contact" class="w3-bar-item w3-button">게임</a>
+          <a href="/foods/game" class="w3-bar-item w3-button">게임</a>
         </div>
       </div>
     </div>
+    <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects" style="padding:0 30px">
+        <h3 class="w3-border-bottom w3-border-light-white w3-padding-16" style="margin-top:25px">혼밥</h3>
+      </div>
     <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-top:70px">
+    <div class="w3-main" style="padding:0 20px">
       
       <!-- First Photo Grid-->
       <div class="w3-row-padding">
@@ -36,21 +45,21 @@
           <img src="<%=asset_path('토스트.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>토스트</b></p>
-            <p>금액: 2,300원</p>
+            <p>가격: 2,300원</p>
           </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom">
           <img src="<%=asset_path('김밥.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Lorem Ipsum</b></p>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p><b>김밥</b></p>
+            <p>가격: 1,500원</p>
           </div>
         </div>
         <div class="w3-third w3-container">
           <img src="<%=asset_path('컵밥.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Lorem Ipsum</b></p>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p><b>컵밥</b></p>
+            <p>가격: 3,200원</p>
           </div>
         </div>
       </div>
@@ -60,22 +69,22 @@
         <div class="w3-third w3-container w3-margin-bottom">
           <img src="<%=asset_path('도시락.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Lorem Ipsum</b></p>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p><b>도시락</b></p>
+            <p>가격: 3,700원</p>
           </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom">
           <img src="<%=asset_path('회덮밥.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Lorem Ipsum</b></p>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p><b>회덮밥</b></p>
+            <p>가격: 9,000원</p>
           </div>
         </div>
         <div class="w3-third w3-container">
           <img src="<%=asset_path('돼지국밥.jpg')%>" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Lorem Ipsum</b></p>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p><b>돼지국밥</b></p>
+            <p>가격: 8,000원</p>
           </div>
         </div>
       </div>
@@ -98,3 +107,4 @@
 
     </body>
 </html>
+
