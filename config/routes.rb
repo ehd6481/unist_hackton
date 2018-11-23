@@ -9,11 +9,10 @@ Rails.application.routes.draw do
   get '/foods/alone'=>'foods#alone'
   get '/foods/alone2'=>'foods#alone2'
   get '/foods/game'=>'foods#game'
-<<<<<<< HEAD
+
   get '/foods/today'=>'foods#today'
-=======
+
   
->>>>>>> e6b585b609ac67ac34a250b7c9f4db01addf8d3c
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
